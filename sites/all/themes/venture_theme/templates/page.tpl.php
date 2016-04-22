@@ -83,7 +83,7 @@
         <a href="#sidr-main" id="navigation-toggle"><span class="fa fa-bars"></span>Menu</a>
         <nav id="site-navigation" class="navigation main-navigation clr" role="navigation">
           <div id="main-menu" class="menu-main-container">
-            <?php 
+            <?php
               $main_menu_tree = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
               print drupal_render($main_menu_tree);
             ?>
@@ -95,7 +95,7 @@
 
   <?php if ($is_front): ?>
   <?php if (theme_get_setting('slideshow_display','venture_theme')): ?>
-  <?php 
+  <?php
     $slide1_head = check_plain(theme_get_setting('slide1_head','venture_theme'));   $slide1_desc = check_plain(theme_get_setting('slide1_desc','venture_theme')); $slide1_url = check_plain(theme_get_setting('slide1_url','venture_theme'));
     $slide2_head = check_plain(theme_get_setting('slide2_head','venture_theme'));   $slide2_desc = check_plain(theme_get_setting('slide2_desc','venture_theme')); $slide2_url = check_plain(theme_get_setting('slide2_url','venture_theme'));
     $slide3_head = check_plain(theme_get_setting('slide3_head','venture_theme'));   $slide3_desc = check_plain(theme_get_setting('slide3_desc','venture_theme')); $slide3_url = check_plain(theme_get_setting('slide3_url','venture_theme'));
@@ -199,7 +199,7 @@
       <?php if ($page['sidebar_first']): ?>
         <aside id="secondary" class="sidebar-container" role="complementary">
          <?php print render($page['sidebar_first']); ?>
-        </aside> 
+        </aside>
       <?php endif; ?>
     </div>
   </div>
@@ -220,7 +220,7 @@
           </div><?php endif; ?>
         </div>
       <?php endif; ?>
-      
+
       <?php if ($page['footer']): ?>
         <div class="span_1_of_1 col col-1">
           <?php print render($page['footer']); ?>
@@ -231,6 +231,6 @@
   <?php endif; ?>
 
   <footer id="copyright-wrap" class="clear">
-    <div id="copyright"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>. <?php print t('Theme by'); ?>  <a href="http://www.devsaran.com" title="Devsaran" target="_blank">Devsaran</a>.</div>
+    <div id="copyright"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>.</div>
   </footer>
 </div>
