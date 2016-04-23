@@ -51,7 +51,7 @@ function book_review_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -67,7 +67,7 @@ function book_review_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -78,7 +78,7 @@ function book_review_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_book_author',
-    'label' => 'Author: ',
+    'label' => 'Author',
     'required' => 1,
     'settings' => array(
       'text_processing' => 0,
@@ -157,7 +157,7 @@ function book_review_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -168,7 +168,7 @@ function book_review_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_book_title',
-    'label' => 'Title: ',
+    'label' => 'Title',
     'required' => 1,
     'settings' => array(
       'text_processing' => 0,
@@ -185,6 +185,43 @@ function book_review_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-book_review-field_our_rating'.
+  $field_instances['node-book_review-field_our_rating'] = array(
+    'bundle' => 'book_review',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_our_rating',
+    'label' => 'Our rating',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'node-book_review-field_rating'.
   $field_instances['node-book_review-field_rating'] = array(
     'bundle' => 'book_review',
@@ -193,18 +230,18 @@ function book_review_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'fivestar',
         'settings' => array(
           'expose' => 1,
           'style' => 'average',
-          'text' => 'none',
+          'text' => 'average',
           'widget' => array(
             'fivestar_widget' => 'default',
           ),
         ),
         'type' => 'fivestar_formatter_default',
-        'weight' => 2,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -215,7 +252,7 @@ function book_review_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_rating',
-    'label' => 'Rating',
+    'label' => 'User ratings',
     'required' => 0,
     'settings' => array(
       'allow_clear' => 0,
@@ -230,19 +267,20 @@ function book_review_field_default_field_instances() {
       'module' => 'fivestar',
       'settings' => array(),
       'type' => 'exposed',
-      'weight' => 4,
+      'weight' => 6,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Author: ');
+  t('Author');
   t('Book image');
   t('Book image goes here');
-  t('Rating');
+  t('Our rating');
   t('Review body');
   t('The body of your book review goes here.');
-  t('Title: ');
+  t('Title');
+  t('User ratings');
 
   return $field_instances;
 }
