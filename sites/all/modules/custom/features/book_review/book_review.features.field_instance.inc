@@ -185,6 +185,184 @@ function book_review_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-book_review-field_location'.
+  $field_instances['node-book_review-field_location'] = array(
+    'bundle' => 'book_review',
+    'default_value' => array(
+      0 => array(
+        'location_settings' => array(
+          'display' => array(
+            'hide' => array(
+              'additional' => 0,
+              'city' => 0,
+              'coords' => 0,
+              'country' => 0,
+              'country_name' => 0,
+              'locpick' => 0,
+              'map_link' => 0,
+              'name' => 0,
+              'postal_code' => 0,
+              'province' => 0,
+              'province_name' => 0,
+              'street' => 0,
+            ),
+          ),
+          'form' => array(
+            'fields' => array(
+              'additional' => array(
+                '#parents' => array(
+                  0 => 'field_location',
+                  1 => 'und',
+                  2 => 0,
+                ),
+                'collect' => 1,
+                'default' => '',
+                'weight' => 6,
+              ),
+              'city' => array(
+                '#parents' => array(
+                  0 => 'field_location',
+                  1 => 'und',
+                  2 => 0,
+                ),
+                'collect' => 1,
+                'default' => '',
+                'weight' => 8,
+              ),
+              'country' => array(
+                '#parents' => array(
+                  0 => 'field_location',
+                  1 => 'und',
+                  2 => 0,
+                ),
+                'collect' => 1,
+                'default' => 'us',
+                'weight' => 14,
+              ),
+              'delete_location' => array(
+                'default' => FALSE,
+                'nodiff' => TRUE,
+              ),
+              'is_primary' => array(
+                'default' => 0,
+              ),
+              'latitude' => array(
+                'default' => 0,
+              ),
+              'lid' => array(
+                'default' => FALSE,
+              ),
+              'locpick' => array(
+                '#parents' => array(
+                  0 => 'field_location',
+                  1 => 'und',
+                  2 => 0,
+                ),
+                'collect' => 1,
+                'default' => FALSE,
+                'nodiff' => TRUE,
+                'weight' => 20,
+              ),
+              'longitude' => array(
+                'default' => 0,
+              ),
+              'name' => array(
+                '#parents' => array(
+                  0 => 'field_location',
+                  1 => 'und',
+                  2 => 0,
+                ),
+                'collect' => 1,
+                'default' => '',
+                'weight' => 2,
+              ),
+              'postal_code' => array(
+                '#parents' => array(
+                  0 => 'field_location',
+                  1 => 'und',
+                  2 => 0,
+                ),
+                'collect' => 1,
+                'default' => '',
+                'weight' => 12,
+              ),
+              'province' => array(
+                '#parents' => array(
+                  0 => 'field_location',
+                  1 => 'und',
+                  2 => 0,
+                ),
+                'collect' => 1,
+                'default' => '',
+                'weight' => 10,
+                'widget' => 'autocomplete',
+              ),
+              're_geocode_location' => array(
+                'default' => FALSE,
+                'nodiff' => TRUE,
+              ),
+              'source' => array(
+                'default' => 0,
+              ),
+              'street' => array(
+                '#parents' => array(
+                  0 => 'field_location',
+                  1 => 'und',
+                  2 => 0,
+                ),
+                'collect' => 1,
+                'default' => '',
+                'weight' => 4,
+              ),
+            ),
+          ),
+        ),
+        'name' => 'Labyrinth Books',
+        'street' => '932 N Fremont St',
+        'additional' => '',
+        'city' => 'Portland',
+        'province' => 'Oregon',
+        'postal_code' => 97227,
+        'country' => 'us',
+        'locpick' => array(
+          'user_latitude' => '45.54788395200156',
+          'user_longitude' => '-122.6759147644043',
+        ),
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'location_cck',
+        'settings' => array(),
+        'type' => 'location_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_location',
+    'label' => 'Location',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'location_cck',
+      'settings' => array(),
+      'type' => 'location',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'node-book_review-field_our_rating'.
   $field_instances['node-book_review-field_our_rating'] = array(
     'bundle' => 'book_review',
@@ -276,6 +454,7 @@ function book_review_field_default_field_instances() {
   t('Author');
   t('Book image');
   t('Book image goes here');
+  t('Location');
   t('Our rating');
   t('Review body');
   t('The body of your book review goes here.');

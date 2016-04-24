@@ -86,6 +86,9 @@ function book_review_strongarm() {
         'title' => array(
           'weight' => '0',
         ),
+        'locations' => array(
+          'weight' => '7',
+        ),
       ),
       'display' => array(),
     ),
